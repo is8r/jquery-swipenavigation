@@ -24,6 +24,7 @@ $(document).on('ready', function() {
   if(_ua.Tablet || _ua.Mobile) {
     $target.find('a').each(function(index, el) {
       var $el = $(el);
+      $el.addClass('hover-disabled');
       $el.on('touchstart', function(event) {
         $el.addClass('touch');
       });

@@ -1,17 +1,48 @@
-@charset "utf-8"
-@import "swipenavigation"
-
-body
-  margin: 0
-  padding: 0
-  background-color: #CDCBC2
-
-.topbar
+.swipenavigation
   $h: 50px
+  overflow: hidden
+  position: relative
+  width: 100%
   height: $h
-  background-color: #FFE500
-  text-align: left
 
-.content
-  padding: 60px 30px 10px 30px
-  color: #aaa
+  ul
+    width: auto
+    list-style: none
+    margin: 0
+    padding: 0
+    white-space: nowrap
+    overflow-x: auto
+    -webkit-overflow-scrolling: touch
+    font-size: 0
+    letter-spacing: -1em
+    word-spacing: -1em
+
+    li
+      display: inline-block
+      margin: 0
+      padding: 0
+      font-size: 1rem
+      letter-spacing: normal
+      word-spacing: normal
+
+      a
+        display: block
+        height: $h
+        line-height: $h
+        text-decoration: none
+        color: #777
+        padding: 0 10px
+        box-sizing: border-box
+        min-width: 80px
+        text-align: center
+        transition: background-color 0.5s ease-out
+
+        &:hover
+          &:not(.hover-disabled)
+            transition: background-color 0s
+            background-color: #fff
+
+        &.hover-disabled
+          &.touch
+            transition: background-color 0s
+            background-color: darken(#FFE500, 10%)
