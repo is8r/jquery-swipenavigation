@@ -54,7 +54,10 @@ body
         min-width: 80px
         text-align: center
         transition: background-color 0.5s ease-out
-        &.hover
+        &:hover
+          &:not(.touch)
+            transition: background-color 0s
+            background-color: #fff
+        &.touch
           transition: background-color 0s
-          background-color: #fff
-
+          background-color: #2ff
