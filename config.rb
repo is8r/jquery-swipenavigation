@@ -43,7 +43,7 @@ configure :build do
   # activate :minify_javascript
 
   activate :relative_assets
-  activate :asset_host, :host => "/jquery-swipeheader"
+  activate :asset_host, :host => "/jquery-swipenavigation"
 end
 
 # Deploy to GitHub Pages
