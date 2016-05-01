@@ -4,7 +4,11 @@ title: Example
 
 %header.topbar.swipenavigation.js-swipenavigation
   %ul
-    - 30.times do |i|
+    - 10.times do |i|
       %li
         %a{href: '#'}
           = i
+  %a.next{href: '#'}
+    %i.fa.fa-caret-right
+  %a.back{href: '#'}
+    %i.fa.fa-caret-left
