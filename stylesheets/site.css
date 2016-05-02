@@ -1,0 +1,14 @@
+@import url(/jquery-swipenavigation/stylesheets/swipenavigation.css);
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #CDCBC2; }
+
+.topbar {
+  height: 50px;
+  background-color: #FFE500;
+  text-align: left; }
+
+.content {
+  padding: 60px 30px 10px 30px;
+  color: #aaa; }
