@@ -48,12 +48,12 @@ $(document).on('ready', function() {
       $target.find('.back').removeClass('is-hidden');
     }
 
-    // console.log($el.scrollLeft());
-    // console.log($target.find('ul')[0].clientWidth);
-    // console.log($target.find('ul')[0].offsetWidth);
-    // console.log($target.find('ul').width());
+    var width = 0;
+    $target.find('ul').find('li').each(function(index, el) {
+      width += $(el).width();
+    });
 
-    if(parseInt($el.scrollLeft()) == parseInt($target.find('ul')[0].offsetWidth)) {
+    if(parseInt($el.scrollLeft()) + parseInt($target.find('ul').width()) == width) {
       $target.find('.next').addClass('is-hidden');
     } else {
       $target.find('.next').removeClass('is-hidden');
